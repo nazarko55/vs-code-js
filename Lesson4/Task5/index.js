@@ -17,7 +17,7 @@ for (let i = m; i <= n; i++) {
     console.log(i);
   }
   else {
-    console.log(i);
+    console.log(45);
   }
 }
 
