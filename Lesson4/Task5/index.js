@@ -13,8 +13,8 @@ for (let i = m; i <= n; i++) {
     result *= i;
   }
 
-  if (i === 5) {
-    console.log(50);
+  if (i % 5 === 0) {
+    console.log(5);
   }
 }
 
