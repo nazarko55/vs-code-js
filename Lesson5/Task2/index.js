@@ -1,5 +1,4 @@
-let b = 'Hi';
-function sayHi(b) {
-  return b;
+function sayHi(b = 'Hi') {
+  console.log((`'${b}, Tom'`));
 }
-console.log(sayHi(`'${b}, Tom'`));
+sayHi();
