@@ -1,17 +1,14 @@
-
 function getPrimes(n) {
 
-  nextPrime:
+  next:
   for (let i = 2; i <= n; i++) {
-
-    for (let j = 2; j < i; j++) {
-      if (i % j == 0) {
-        continue nextPrime;
+    for (let k = 2; k < i; k++) {
+      if (i % k === 0) {
+        continue next;
       }
-
     }
-
-    console.log(i); // простое число
+    console.log(i);
   }
 }
-console.log(getPrimes(15));
+
+getPrimes(30);
