@@ -1,0 +1,12 @@
+
+function getSpecialNumbers(m, n) {
+  let arr = [];
+  for (let i = m; i <= n; i++) {
+    if (i % 3 == 0) {
+      arr.push(i);
+    }
+  }
+  return arr;
+}
+const arr = getSpecialNumbers(10, 40);
+console.log(arr);
