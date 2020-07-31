@@ -1,8 +1,8 @@
-function getEvenOdd(c = 8) {
-  if (c % 2 === 0) {
-    console.log('even');
+function getEvenOdd(c = 5) {
+  if (c % 2 == 0) {
+    return 'even';
   }
-  else if (c % 2 === 1)
-    console.log('odd');
+  else if (c % 2 == 1)
+    return 'odd';
 }
 getEvenOdd();
