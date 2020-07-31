@@ -1,5 +1,5 @@
-function sayHi(b = 'Hi') {
-  console.log(`'${b}, Tom'`);
-
+let b = 'Hi';
+function sayHi(b) {
+  return b;
 }
-sayHi();
+console.log(`'${b}, Tom'`);
