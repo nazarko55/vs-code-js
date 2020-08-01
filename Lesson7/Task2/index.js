@@ -10,4 +10,4 @@ const sortDesc = numbers => {
   return numbers;
 };
 const arr = [12, 45, 89, 90, 43, 67, 81];
-console.log(sortArray(arr));
+console.log(sortDesc(arr));
