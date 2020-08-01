@@ -1,4 +1,4 @@
-const sortArray = numbers => {
+const sortDesc = numbers => {
   function somepare(a, b) {
     if (b < a) {
       return 1;
