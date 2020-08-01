@@ -1,0 +1,5 @@
+eslint(eqeqeq)
+eslint(no-var)
+eslint(no-undef)
+eslint(no-plusplus)
+eslint(no-return-assign)
