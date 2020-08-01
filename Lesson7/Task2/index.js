@@ -1,11 +1,5 @@
 const sortDesc = numbers => {
-  function somepare(a, b) {
-    if (b < a) {
-      return 1;
-    }
-    return -1;
-  }
-  numbers.sort(somepare);
+  numbers.sort((a, b) => b - a);
 
   return numbers;
 };
