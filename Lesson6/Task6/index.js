@@ -1,5 +1,5 @@
 function createEmptyArray(len) {
-  len = [];
-  return len.length;
+  let arr = new Array(len);
+  return arr;
 }
 console.log(createEmptyArray());
