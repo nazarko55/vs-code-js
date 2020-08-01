@@ -1,10 +1,8 @@
-
-function getSubArray(arr, n) {
-  let newArr = [];
-  for (let i = 0; i < n; i++) {
-    newArr.push(arr[i]);
+function includes(arr, n) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == n) return true;
   }
-  return newArr;
+  return false;
 }
 
-console.log(getSubArray([24, 67, 89, 32, 14], 4));
+console.log(includes([25, 32, 65, 75, 85, 95], 1));
