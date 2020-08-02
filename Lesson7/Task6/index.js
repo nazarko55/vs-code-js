@@ -1,6 +1,11 @@
-function reverseArray(arr) {
-  if (!Array.isArray(arr)) return null;
-  return arr.reverse();
-
+const reverseArray = numbers => {
+  if (!Array.isArray(numbers)) {
+    return null;
+  }
+  const reverseNum = numbers.map(num => num);
+  return reverseNum.reverse();
 }
-console.log(reverseArray());
+
+const reverseNumbers = [2, 3, 4, 5, 6];
+
+console.log(reverseArray(reverseNumbers));
