@@ -4,7 +4,7 @@ const user = {
 };
 user.hobby = 'football';
 const anotherKey = 'married';
-user.anotherKey = false;
+user.married = false;
 user['favorite music'] = 'rock';
 user.address = {};
 user.address.country = 'Ukraine';
