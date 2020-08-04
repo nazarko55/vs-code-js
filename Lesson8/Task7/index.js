@@ -22,8 +22,15 @@ function mergeObjectsV2(obj1, obj2) {
 }
 console.log(mergeObjectsV2(obj1, obj2));
 
-function mergeObjectsV3(obj1, obj2) {
-  let resty = Object.assign(...obj1, ...obj2);
-  return resty;
-}
+const mergeObjectsV3 = (obj1, obj2) => {
+  const result = { ...obj1, ...obj2 };
+  return result;
+};
 console.log(mergeObjectsV3(obj1, obj2));
+
+const mergeObjectsV4 = (obj1, obj2) => {
+  const result = { ...obj2, ...obj1 };
+  return result;
+};
+console.log(mergeObjectsV4(obj1, obj2));
+
