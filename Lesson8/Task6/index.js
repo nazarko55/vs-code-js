@@ -1,28 +1,27 @@
-const addPropertyV1 = (userData, userId) => {
-  userData.id = userId;
-  return userData;
+const obj = {
+  name: "Tom",
 };
-
-const addPropertyV2 = (userData, userId) => {
-  const result = Object.assign(userData, { id: userId });
-  return result;
+let newKey = "age";
+let newValue = 17;
+const addPropertyV1 = (obj, key, value) => {
+  obj[key] = value;
+  return obj;
 };
-
-const addPropertyV3 = (userData, userId) => {
-  const result = Object.assign({}, userData, { id: userId });
-  return result;
+console.log(addPropertyV1(obj, newKey, newValue));
+const addPropertyV2 = (obj, key, value) => {
+  Object.assign(obj, { [key]: value });
+  return obj;
 };
-
-const addPropertyV4 = (userData, userId) => {
-  const result = Object.assign({ ...userData }, { id: userId });
-  return result;
+console.log(addPropertyV2(obj, newKey, newValue));
+const addPropertyV3 = (obj, key, value) => {
+  let clone = Object.assign({}, obj);
+  Object.assign(clone, { [key]: value });
+  return clone;
 };
-
-const user = {
-  name: 'King',
+console.log(addPropertyV3(obj, newKey, newValue));
+const addPropertyV4 = (obj, key, value) => {
+  let clone = { ...obj };
+  Object.assign(clone, { [key]: value });
+  return clone;
 };
-
-// console.log(addPropertyV1(user, '0987654321'))
-// console.log(addPropertyV2(user, '0987654321'))
-// console.log(addPropertyV3(user, '0987654321'))
-// console.log(addPropertyV4(user, '0987654321'))
+console.log(addPropertyV4(obj, newKey, newValue));
