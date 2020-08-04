@@ -6,7 +6,7 @@ let obj = {
 
 function getKeys(obj) {
   let getArrKeys = Object.keys(obj);
-  return (getArrKeys.forEach(key => console.log(`${key}: ${obj[key]}`)));
+  return (getArrKeys.forEach(key => console.log(key)));
 }
 getKeys(obj);
 
