@@ -1,13 +1,13 @@
-let obj = {
-  name: 'Nazar',
-  surname: 'Kosov',
-  age: 22,
-}
-
 function getKeys(obj) {
-  let getArrKeys = Object.keys(obj);
-  return (getArrKeys.forEach(key => console.log(key)));
+  let arrKeys = Object.keys(obj);
+  return (arrKeys.forEach(key => console.log(key)));
 }
-getKeys(obj);
+const user = {
+  name: 'Alex',
+  age: 30,
+  married: true,
+  children: 'two girls',
+}
+getKeys(user);
 
-console.log(getKeys());
+// console.log(getKeys(user).forEach(key => console.log(key)));
