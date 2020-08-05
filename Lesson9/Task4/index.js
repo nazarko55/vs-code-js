@@ -5,6 +5,6 @@ const dayTransaction = [
 ]
 
 function getTotalRevenue(arr) {
-  return dayTransaction.map((el) => el.amount).reduce((a, b) => a + b, 0)
+  return dayTransaction.map((el) => el.amount).reduce((a, b) => a + b);
 }
 console.log(getTotalRevenue());
