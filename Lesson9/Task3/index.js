@@ -7,23 +7,12 @@ const rooms = {
   ],
   room2: [
     { name: 'room2 name1' },
-    { name: 'room2 name2' },
-    { name: 'room2 name3' },
-    { name: 'room2 name4' },
   ],
   room3: [
     { name: 'room3 name1' },
     { name: 'room3 name2' },
     { name: 'room3 name3' },
-    { name: 'room3 name4' },
   ],
-  room4: [
-    { name: 'room4 name1' },
-    { name: 'room4 name2' },
-    { name: 'room4 name3' },
-    { name: 'room4 name4' },
-  ],
-
 };
 
 const getPeople = obj => {
