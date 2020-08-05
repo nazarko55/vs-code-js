@@ -7,19 +7,20 @@ const rooms = {
   ],
   room2: [
     { name: 'room2 name1' },
+
   ],
   room3: [
     { name: 'room3 name1' },
     { name: 'room3 name2' },
     { name: 'room3 name3' },
+    { name: 'room3 name4' },
   ],
+
 };
 
 const getPeople = obj => {
-  Object.values(obj)
-    .reduce((acc, elem) => acc.concat(elem), [])
-    .map(elem => elem.name);
-  return obj;
+  return Object.values(obj).flat().map(obj => Object.values(obj)).flat();
 }
-
-console.log(getPeople(rooms));
+const result = getPeople(rooms)
+console.log(result);
+console.log(rooms);
