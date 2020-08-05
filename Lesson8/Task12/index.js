@@ -1,20 +1,24 @@
-const compareObjects = (obj1, obj2) => {
-  const arr1 = Object.entries(obj1).flat();
-  const arr2 = Object.entries(obj2).flat();
-  console.log(arr1);
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  return arr1.every((elem, i) => elem == arr2[i]);
-};
+// algo
+// gather all arguments
+// multiply
 
-const obj1 = {
-  name: 'Bob',
-  age: 17,
-}
-const obj2 = {
-  name: 'Bob',
-  age: 17,
+function multiply(...args) {
+  console.log(args);
+  let res = 1;
+  args.forEach(el => {
+    res = res * el;
+  });
+  return res;
 }
 
-console.log(compareObjects(obj1, obj2));
+
+/////////////////// 2
+
+function multiply(...args) {
+  return args.reduce((acc, current) => res * current);
+}
+const multipleRes = multiply(10, 12, 3, 71, 4, 8);
+console.log(multipleRes);
+
+
+
