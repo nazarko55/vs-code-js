@@ -15,9 +15,10 @@ const rooms = {
   ],
 };
 
-const getPeople = obj => {
-  return Object.values(obj).flat().map(obj => Object.values(obj)).flat();
-}
-const result = getPeople(rooms)
+const getPeople = obj => Object.values(obj)
+  .reduce((acc, elem) => acc.concat(elem), [])
+  .map(elem => elem.name);
+
+const result = getPeople(rooms);
 console.log(result);
 console.log(rooms);
