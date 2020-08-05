@@ -3,8 +3,8 @@ const dayTransaction = [
   { userId: 38, amount: 210, operation: 'sell' },
   { userId: 274, amount: 112, operation: 'sell' },
 ]
+function getTotalRevenue(dayTransaction) {
+  return dayTransaction.map((el) => el.amount).reduce((a, b) => a + b, 0);
 
-function getTotalRevenue(arr) {
-  return dayTransaction.map((el) => el.amount).reduce((a, b) => a + b);
 }
-console.log(getTotalRevenue());
+console.log(getTotalRevenue(dayTransaction));
