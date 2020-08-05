@@ -4,7 +4,6 @@ const user = {
   key: 2,
 }
 const copyObj = obj => {
-  const player = { ...user };
-  return player;
+  return { ...user };
 }
 console.log(copyObj());
