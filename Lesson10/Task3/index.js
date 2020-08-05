@@ -5,4 +5,4 @@ const multiRound = (num, accuracy) => [
   Math.trunc((num) * (10 ** accuracy)) / 10 ** accuracy, +num.toFixed(accuracy)
 
 ]
-console.log(multiRound(11.678, 2));
+console.log(multiRound(11.678, 3));
