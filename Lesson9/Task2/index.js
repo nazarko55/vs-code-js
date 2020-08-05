@@ -1,9 +1,10 @@
 const user = {
-  name: 'Taras',
-  age: 18,
-  key: 2,
-}
-const copyObj = obj => {
-  return { ...user };
-}
-console.log(copyObj());
+  name: 'Tom',
+  key: 17,
+  height: 1.85,
+};
+
+const copyObj = obj => Object.assign({}, obj);
+
+console.log(copyObj(user));
+console.log(user);
