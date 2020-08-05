@@ -24,9 +24,11 @@ const rooms = {
     { name: 'room4 name4' },
   ],
 
-}
+};
 
-const getPeople = obj => Object.values(obj).flat().map(obj => Object.values(obj)).flat();
+const getPeople = obj => {
+  return Object.values(obj).flat().map(obj => Object.values(obj)).flat();
+}
 const result = getPeople(rooms)
 console.log(result);
 console.log(rooms);
