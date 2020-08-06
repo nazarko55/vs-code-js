@@ -1,10 +1,10 @@
-const user = {
-  name: 'Tom',
-  key: 17,
-  height: 1.85,
-};
 
-const copyObj = obj => Object.assign({}, obj);
+function buildObject(keyList, valueList) {
+  keyList.reduce((acc, curvalue) => {
+    console.log(curvalue);
+  }, {})
+}
 
-console.log(copyObj(user));
-console.log(user);
+const keys = ['Name', 'age'];
+const values = ['Denis', 1000];
+buildObject(keys, values);
