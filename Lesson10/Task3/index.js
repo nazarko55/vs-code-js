@@ -1,13 +1,9 @@
-const multiRound = function (num, len) {
-  const res = Math.pow(10, len);
+const multiRound = num => [
+  Math.floor(num * 100) / 100,
+  Math.round(num * 100) / 100,
+  Math.ceil(num * 100) / 100,
+  Math.trunc(num * 100) / 100,
+  num.toFixed(2)
+];
 
-  return [
-    Math.floor(num * res) / res,
-    Math.round(num * res) / res,
-    Math.ceil(num * res) / res,
-    Math.trunc(num * res) / res,
-    +num.toFixed(len)
-  ];
-};
-
-console.log(multiRound(1.23, 5));
+console.log(multiRound(-Math.PI));
