@@ -1,8 +1,13 @@
-const multiRound = (num, accuracy) => [
-  Math.floor((num) * (10 ** accuracy)) + 10 ** accuracy,
-  Math.round((num) * (10 ** accuracy)) - 10 ** accuracy,
-  Math.ceil((num) * (10 ** accuracy)) / 10 ** accuracy,
-  Math.trunc((num) * (10 ** accuracy)) / 10 ** accuracy, +num.toFixed(accuracy)
+const superRound = function (num, len) {
+  const res = Math.pow(10, len);
 
-]
-console.log(multiRound(11.678, 3));
+  return [
+    Math.floor(num * res) / res,
+    Math.round(num * res) / res,
+    Math.ceil(num * res) / res,
+    Math.trunc(num * res) / res,
+    +num.toFixed(len)
+  ];
+};
+
+console.log(superRound(1.23, 5));
