@@ -19,13 +19,21 @@ const contacts = [{
   phoneNumber: "111-11-11"
 }
 ];
+const direction = true;
 
-const sortContacts = contacts => {
-  if (!Array.isArray(contacts)) return null;
-  const result = contacts
-    .sort((a, b) => {
-      return b.name.localeCompare(a.name);
+const sortContacts = (contacts, isAsc) => {
+  if (!Array.isArray(contacts)) {
+    return null;
+  }
+  const result = contacts.sort((a, b) => {
+    return a.name.localeCompare(b.name);
+  });
+  if (isAsc === false) {
+    contacts.sort((a, b) => {
+      return b.name.localeCompare(a.name)
     });
+  }
   return result;
 };
-console.log(sortContacts(contacts));
+
+console.log(sortContacts(contacts, direction));
