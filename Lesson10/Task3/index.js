@@ -1,4 +1,4 @@
-const superRound = function (num, len) {
+const multiRound = function (num, len) {
   const res = Math.pow(10, len);
 
   return [
@@ -10,4 +10,4 @@ const superRound = function (num, len) {
   ];
 };
 
-console.log(superRound(1.23, 5));
+console.log(multiRound(1.23, 5));
