@@ -1,10 +1,22 @@
 
-function buildObject(keyList, valueList) {
-  keyList.reduce((acc, curvalue) => {
-    console.log(curvalue);
-  }, {})
+//const buildObject = (keysList, valuesList) => {
+//return keysList.reduce((result, num, i) =>
+//({ ...result, [num]: valuesList[i] }), {});
+//}
+
+//const keysList = ['name', 'surname', 'age'];
+//const valuesList = ['Nazar', 'ko', 20];
+//const result = buildObject(keysList, valuesList);
+//console.log(result);
+
+function buildObject(keysList, valuesList) {
+  return keysList.reduce((accamulator, key, index) => {
+    return { ...accamulator, [key]: valuesList[index] };
+
+  }, {});
 }
 
-const keys = ['Name', 'age'];
-const values = ['Denis', 1000];
-buildObject(keys, values);
+const keysList = ['name', 'surname', 'age'];
+const valuesList = ['Nazar', 'ko', 20];
+const result = buildObject(keysList, valuesList);
+console.log(result);
