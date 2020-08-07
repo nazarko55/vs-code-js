@@ -1,27 +1,7 @@
-export const calc = expression => {
-  if (typeof expression !== 'string') {
-    return null;
-  }
+export const getSquaredArray = arr =>
+  arr.map(i => i * i);
 
-  let [a, operation, b] = expression.split(' ');
-  let result;
-  a = +a;
-  b = +b;
+export const getOddNumbers = arr =>
+  arr.filter(i => (i % 2 === 1));
 
-  switch (operation) {
-    case '+':
-      result = a + b;
-      break;
-    case '-':
-      result = a - b;
-      break;
-    case '*':
-      result = a * b;
-      break;
-    case '/':
-      result = a / b;
-      break;
-  }
-
-  return `${expression} = ${result}`;
-};
+export default (a, b) => a + b;
