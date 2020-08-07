@@ -1,6 +1,6 @@
-function reverseString(str) {
-  if (str === '') return null;
-  return str.split('').reverese().join('');
-}
-console.log(reverseString('hello'));
+const reverseString = str => {
+  if (typeof str !== 'string') return null
+  return str.split('').reverse().join('');
+};
+console.log(reverseString('nikolay'));
 
