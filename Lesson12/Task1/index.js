@@ -9,7 +9,13 @@ const calc = expression => {
     case '-':
       result = a - b;
       break;
+    case '*':
+      result = a * b;
+      break;
+    case '/':
+      result = a / b;
+      break;
   }
   return `${expression} = ${result}`;
 };
-console.log(calc('1007 + 2'));
+console.log(calc('1007 * 2'));
