@@ -1,4 +1,4 @@
-export const withdraw = (arr, clients, balances, client, amount) => {
+const withdraw = (clients, balances, client, amount) => {
   const similar = clients.indexOf(client);
   console.log(clients.indexOf(client))
   console.log(balances[similar])
