@@ -1,4 +1,4 @@
-export default calc = expression => {
+export const calc = expression => {
   if (typeof expression !== 'string') {
     return null;
   }

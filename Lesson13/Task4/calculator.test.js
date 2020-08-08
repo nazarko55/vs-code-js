@@ -1,4 +1,4 @@
-import calc from './calculator.js';
+import { calc } from './calculator.js';
 
 it('If we will give a string', () => {
   const result = calc([3, 5, 7]);
