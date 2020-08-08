@@ -1,4 +1,4 @@
-export default expression => {
+export default calc = expression => {
   if (typeof expression !== 'string') {
     return null;
   }
