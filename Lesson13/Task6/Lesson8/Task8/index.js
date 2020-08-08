@@ -1,5 +1,4 @@
 export const withdraw = (arr, clients, balances, client, amount) => {
-  if (Array.isArray(arr)) return null;
   const similar = clients.indexOf(client);
   console.log(clients.indexOf(client))
   console.log(balances[similar])
