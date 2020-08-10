@@ -2,8 +2,10 @@ export const user = {
   firstName: 'John',
   lastName: 'Doe',
   getFullName() {
-    console.log(`${this.firstName} ${this.lastName}`);
+    return `${this.firstName} ${this.lastName}`
   }
-};
-
-user.getFullName();
+  // getFullName: () => `${firstName} ${lastName}`
+}
+const res = user.getFullName.bind(user);
+console.log(user.getFullName());
+console.log(res());
