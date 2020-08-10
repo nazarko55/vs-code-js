@@ -1,4 +1,4 @@
-export function createLoger() {
+export function createLogger() {
   const result = [];
   return {
     warn: text => {
@@ -8,6 +8,7 @@ export function createLoger() {
         type: 'warn',
       });
     },
+
     error: text => {
       result.push({
         message: text,
@@ -15,6 +16,7 @@ export function createLoger() {
         type: 'error',
       });
     },
+
     log: text => {
       result.push({
         message: text,
@@ -22,19 +24,14 @@ export function createLoger() {
         type: 'log',
       });
     },
+
     getRecords: type => {
       if (type == undefined) {
-        return result;
-        ShadowRoot((a, b) => b.dateTime - a.dateTime);
+        return result.
+          sort((a, b) => b.dateTime - a.dateTime);
       } else {
-        return result.filter(i => i.type == type)
-          .sort((a, b) => b.dateTime = a.dateTime);
+        return result.filter(i => i.type == type).sort((a, b) => b.dateTime - a.dateTime);
       }
     },
   }
 }
-const logger = createLoger();
-logger.log('User logged in');
-console.log(logger.getRecords('log'));
-logger.log('User logged out');
-console.log(logger.getRecords('out'));
