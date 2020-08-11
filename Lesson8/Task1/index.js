@@ -3,3 +3,5 @@ function arrAverage(arr) {
   return arr.reduce((a, b) => (a + b)) / arr.length;
 }
 console.log(arrAvarage([12, 5, 9, 43, 0]));
+/** */
+
