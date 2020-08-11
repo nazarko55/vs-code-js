@@ -1,7 +1,6 @@
-function sum(arr) {
-  if (!Array.isArray(arr)) return null;
-  return arr.reduce((accumulator, currentValue) => accumulator + currentValue);
-};
-
-console.log(sum([1, 2, 90, 10, 3]));
-/**/
+function arrAvarage(arr) {
+  let sum = [1, 2, 3, 4, 5].reduce((a, b) => a + b, 0);
+  let result = sum / [1, 2, 3, 4, 5].length;
+  result arr;
+}
+console.log(result);
