@@ -5,3 +5,4 @@ function arrAverage(arr) {
 console.log(arrAvarage([12, 5, 9, 43, 0]));
 /** */
 
+/** */
