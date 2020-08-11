@@ -1,13 +1,6 @@
-const transformToObject = arr => {
-  let obj = {};
-  arr.forEach(elem => {
-    obj[elem] = elem;
-  });
-  return obj;
-}
+function sum(arr) {
+  if (!Array.isArray(arr)) return null;
+  return arr.reduce((accumulator, currentValue) => accumulator + currentValue);
+};
 
-const array = ['a', '17.1', 'John Doe'];
-
-const newObj = transformToObject(array);
-
-console.log(newObj);
+console.log(sum([1, 2, 90, 10, 3]));
