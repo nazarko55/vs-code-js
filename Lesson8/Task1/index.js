@@ -1,6 +1,5 @@
 function arrAvarage(arr) {
-  let sum = [1, 2, 3, 4, 5].reduce((a, b) => a + b, 0);
-  let result = sum / [1, 2, 3, 4, 5].length;
-  result arr;
+  if (!Array.isArray(arr)) return null;
+  return arr.reduce((a, b) => (a + b)) / arr.length;
 }
-console.log(result);
+console.log(arrAvarage([12, 5, 9, 43, 0]));
