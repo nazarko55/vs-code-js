@@ -4,3 +4,4 @@ function sum(arr) {
 };
 
 console.log(sum([1, 2, 90, 10, 3]));
+/**/
