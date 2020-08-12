@@ -52,7 +52,7 @@ function getPopulation(population) {
 // используйте объект country
 // результат работы ф-ции getPopulation присвойте в переменную и выведите в консоль
 // ... your code here
-const res = getPopulation.call({ ...country }, '43000');
+const res = getPopulation.call({ ...country }, 43000);
 console.log(res);
 
 
