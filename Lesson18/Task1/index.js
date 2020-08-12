@@ -1,6 +1,6 @@
 'use strict';
 
-const event = {
+export const event = {
   guests: [
     { name: 'Tom', email: 't@gmail.com', age: 17 },
     { name: 'John', email: 'example@server.com', age: 18 }
