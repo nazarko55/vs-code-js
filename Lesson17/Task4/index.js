@@ -2,6 +2,7 @@
 const student = {
   name: 'Tom',
 };
+/** */
 
 export function sayName() {
   console.log(this.name);
