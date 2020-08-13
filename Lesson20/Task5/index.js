@@ -19,10 +19,10 @@ export class UserRepository {
   constructor(users) {
     this._users = Object.freeze(users);
   }
-
-  getUser() {
+  get users() {
     return this._users;
   }
+
   getUserNames() {
     return this._users.map((a) => a.name);
   }
@@ -35,8 +35,8 @@ export class UserRepository {
         return i.name;
     }
   }
-}
 
+}
 const newUser = new User('333', 'Max', '1234');
 const newUser1 = new User('444', 'Tom', '5678');
 console.log(newUser);
