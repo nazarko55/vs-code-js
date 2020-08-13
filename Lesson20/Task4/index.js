@@ -3,8 +3,8 @@ EXPORT class Order {
     this.id = (Math.random()).toString();
     this.price = price;
     this.dateCreated = new Date();
-    this.dateConfirmed = 0;
-    this.isConfirmed = false;
+    this.isConfirmed = 0;
+    this.dateConfirmed = false;
     this.city = city;
     this.type = type;
   }
