@@ -4,5 +4,4 @@ const getSection = num => {
   console.log(parentDiv.dataset.section);
   return parentDiv.dataset.section;
 }
-getSection(3);
 export { getSection };
