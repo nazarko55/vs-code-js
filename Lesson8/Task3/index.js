@@ -1,18 +1,60 @@
-const transaction = {
-  currency: 'USD',
-  value: 170,
-  operation: 'sale',
-  agent: {
-    country: 'Ukraine',
-    company: 'NYSE'
-  },
-  'operation time': 1584029990001
-};
+const timer = {
+  secondPased: 0,
+  minsTimer: 0,
+  startTimer() {
+    const adder = function () {
+      console.log(this);
 
-console.log(transaction.currency);
-console.log(transaction['value']);
-const key = 'operation';
-console.log(transaction['operation']);
-console.log(transaction.agent['company']);
-console.log(transaction.agent['country']);
-console.log(transaction['operation time']);
+      this.secondPased += 1;
+    };
+
+    const adderBinded = adder.bind(this);
+    setInterval(adder, 1000);
+  },
+
+  startTimer() {
+    setInterval(() => {
+      console.log(this);
+
+      this.secondPased += 1;
+    }, 1000);
+  }
+
+  stopTimer() {
+
+  },
+
+  getTime() {
+
+  },
+
+  rest() {
+
+  }
+}
+
+setTimeout(() => {
+  console.log('hello');
+}, 2000);
+
+setInterval(() => {
+  console.log('privet');
+}, 5000);
+
+const user = {
+  name: 'Test',
+  run() {
+    console.log(this);
+  }
+}
+
+user.run();
+
+
+function printer(func) {
+  console.log('i am runing');
+  func();
+}
+
+const func = user.run;
+printer(func);
