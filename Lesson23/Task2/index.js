@@ -1,6 +1,6 @@
 const tasks = [{
   text: 'Finished school',
-  done: true,
+  done: false,
   id: 1,
   createDate: new Date(2014, 9, 1, 0, 0, 0, 0),
   doneData: undefined,
@@ -29,7 +29,7 @@ const tasks = [{
 {
   text: 'Learn JavaScript',
   done: true,
-  id: 4,
+  id: 5,
   createDate: new Date(2019, 9, 1, 0, 0, 0, 0),
   doneDate: new Date(2020, 2, 5),
 },
