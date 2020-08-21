@@ -3,47 +3,48 @@ const passwordInputElem = document.querySelector('#password');
 const emailErrorElem = document.querySelector('.error-text_email');
 const passwordErrorElem = document.querySelector('.error-text_password');
 
-const isRequired = value =>
-  value ? undefined : 'Required';
+const isRequire = value => value
+  ? undefined
+  : 'Required';
 
-const isEmail = value => value.includes('@') ?
-  undefined :
-  'Should be an email';
+const isEmail = value => value.includes('@')
+  ? undefined
+  : 'Should be an email';
+
 
 const validatorsByField = {
-  email: [isRequired, isEmail],
-  password: [isRequired],
-}
+  email: [isRequire, isEmail],
+  password: [isRequire]
+};
 
-const validate = (fieldName, value) => {
-  const validators = validatorsByField[fieldName];
+const validate = (fieldNmae, value) => {
+  const validators = validatorsByField[fieldNmae];
   return validators
     .map(validator => validator(value))
-    .filter(errorText => errorText)
+    .filter(erroText => erroText)
     .join(', ')
 }
 
 const onEmailChange = event => {
   const errorText = validate('email', event.target.value);
   emailErrorElem.textContent = errorText;
-};
+}
 
 const onPasswordChange = event => {
   const errorText = validate('password', event.target.value);
   passwordErrorElem.textContent = errorText;
-};
+}
 
 
 emailInputElem.addEventListener('input', onEmailChange);
 passwordInputElem.addEventListener('input', onPasswordChange);
 
-const formElem = document.querySelector('.login-form');
+
+const formElment = document.querySelector('.login-form');
 
 const onFormSubmit = event => {
   event.preventDefault();
-  const formData = [...new FormData(formElem)]
+  const formData = [...new FormData(formElment)]
     .reduce((acc, [field, value]) => ({ ...acc, [field]: value }), {})
-  alert(JSON.stringify(formData));
-}
-
-formElem.addEventListener('submit', onFormSubmit);
+};
+formElment.addEventListener('submit', onFormSubmit);
