@@ -1,0 +1,36 @@
+export const todoList = [{
+  text: 'Buy milk',
+  done: false,
+  id: 1,
+  createDate: new Date(2015, 9, 1, 0, 0, 0, 0),
+  doneDate: undefined,
+},
+{
+  text: 'Pick up Tom from airport',
+  done: false,
+  id: 2,
+  createDate: new Date(2016, 9, 1, 0, 0, 0, 0),
+  doneDate: undefined,
+},
+{
+  text: 'Visit party',
+  done: false,
+  id: 3,
+  createDate: new Date(2016, 9, 1, 0, 0, 0, 0),
+  doneDate: undefined,
+},
+{
+  text: 'Visit doctor',
+  done: true,
+  id: 4,
+  createDate: new Date(2016, 9, 1, 0, 0, 0, 0),
+  doneDate: new Date(2017, 5, 3),
+},
+{
+  text: 'Buy meat',
+  done: true,
+  id: 5,
+  createDate: new Date(2018, 9, 1, 0, 0, 0, 0),
+  doneDate: new Date(2019, 6, 4),
+},
+];
