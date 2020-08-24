@@ -1,7 +1,5 @@
-
-const calc = initialVal => {
-  let result = initialVal;
-
+const calc = initValue => {
+  let result = initValue;
   const calculator = {
     add(value) {
       result += value;
@@ -9,6 +7,7 @@ const calc = initialVal => {
     },
     mult(value) {
       result *= value;
+      console.log(this);
       return this;
     },
     subtract(value) {
@@ -22,11 +21,13 @@ const calc = initialVal => {
     result() {
       return result;
     }
+
   };
   return calculator;
-};
+}
 
+// const result = calc(3).add(2).mult(4).div(10).substract(5).result();
 
-const result = calc(10).add(2).mult(5).div(3).substract(5).result();
-console.log(result);
+// console.log(result);
+
 export { calc };
