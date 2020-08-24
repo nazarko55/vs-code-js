@@ -28,5 +28,5 @@ const calc = initialVal => {
 
 
 const result = calc(10).add(2).mult(5).div(3).substract(5).result();
-
 console.log(result);
+export { calc };
