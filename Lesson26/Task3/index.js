@@ -6,4 +6,4 @@ const triple = mult(3);
 
 console.log(triple(5));
 
-//export { mult, twice, triple };
+export { mult, twice, triple };
