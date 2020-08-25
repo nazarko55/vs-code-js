@@ -1,4 +1,4 @@
-const addImage = imgSrc => {
+export const addImage = imgSrc => {
   return new Promise((getImageSize, getErrorText) => {
     const imgElem = document.createElement('img');
     imgElem.setAttribute('alt', 'My Photo');
