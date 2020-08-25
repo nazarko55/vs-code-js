@@ -24,6 +24,5 @@ function onImageLoaded(error, data) {
   sizeElem.textContent = `${width} x ${height}`;
 };
 
-addImage('https://th.bing.com/th/id/OIP.vwN3Y9sr3vUO1kA5e7joBQHaHV?pid=Api&rs=1', onImageLoaded);
-
+addImage("https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg", onImageLoaded);
 export { addImage };
