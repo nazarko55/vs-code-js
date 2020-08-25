@@ -1,4 +1,4 @@
-export const addImage = (imgSrc, callback) => {
+const addImage = (imgSrc, callback) => {
   const imgElem = document.createElement('img');
   imgElem.setAttribute('alt', 'My photo');
   imgElem.src = imgSrc;
@@ -15,7 +15,8 @@ export const addImage = (imgSrc, callback) => {
 
 };
 
-const imgSrc = "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg";
+// addImage('https://th.bing.com/th/id/OIP.vwN3Y9sr3vUO1kA5e7joBQHaHV?pid=Api&rs=1', onImageLoaded);
+
 const onImageLoaded = (error, data) => {
   if (error) {
     console.log(error);
@@ -26,4 +27,4 @@ const onImageLoaded = (error, data) => {
   sizeElem.textContent = `${width} x ${height}`;
 };
 
-addImage(imgSrc, onImageLoaded);
+export { addImage };
