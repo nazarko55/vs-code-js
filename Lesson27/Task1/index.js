@@ -1,20 +1,21 @@
-function addImage(imgSrc, callback) {
+export const addImage = (imgSrc, callback) => {
   const imgElem = document.createElement('img');
-  imgElem.setAttribute('alt', 'My Photo');
+  imgElem.setAttribute('alt', 'My photo');
   imgElem.src = imgSrc;
   const containerElem = document.querySelector('.page');
   containerElem.append(imgElem);
 
-  function onImageLoaded() {
+  const onImageLoaded = () => {
     const { width, height } = imgElem;
     callback(null, { width, height });
-  };
+  }
 
   imgElem.addEventListener('load', onImageLoaded);
   imgElem.addEventListener('error', () => callback('Image load failed'));
+
 };
 
-function onImageLoaded(error, data) {
+const onImageLoaded = (error, data) => {
   if (error) {
     console.log(error);
     return;
@@ -23,5 +24,7 @@ function onImageLoaded(error, data) {
   const sizeElem = document.querySelector('.image-size');
   sizeElem.textContent = `${width} x ${height}`;
 };
+
+addImage(imgSrc, onImageLoaded);
 
 export { addImage };
