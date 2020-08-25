@@ -1,30 +1,18 @@
-const addImage = (imgSrc, callback) => {
+export function addImage(url, callback) {
+  const pageElem = document.querySelector('.page');
+
   const imgElem = document.createElement('img');
-  imgElem.setAttribute('alt', 'My photo');
-  imgElem.src = imgSrc;
-  const containerElem = document.querySelector('.page');
-  containerElem.append(imgElem);
+  imgElem.setAttribute('alt', 'Some picture');
+  imgElem.src = url
 
-  const onImageLoaded = () => {
+  pageElem.append(imgElem)
+  imgElem.addEventListener('load', () => {
     const { width, height } = imgElem;
-    callback(null, { width, height });
-  }
+    callback(null, { width, height })
+  })
 
-  imgElem.addEventListener('load', onImageLoaded);
-  imgElem.addEventListener('error', () => callback('Image load is failed...'));
-
-};
-const imgSrc = "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg";
-const onImageLoaded = (error, data) => {
-  if (error) {
-    console.log(error);
-    return;
-  }
-  const { width, height } = data;
-  const sizeElem = document.querySelector('.image-size');
-  sizeElem.textContent = `${width} x ${height}`;
-};
-
-addImage(imgSrc, onImageLoaded);
-
-export { addImage };
+  imgElem.addEventListener('error', () => {
+    const errorMessage = 'Image load failed'
+    callback(errorMessage)
+  })
+}
