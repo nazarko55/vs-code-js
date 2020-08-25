@@ -24,6 +24,6 @@ function onImageLoaded(error, data) {
   sizeElem.textContent = `${width} x ${height}`;
 };
 
-// addImage('https://th.bing.com/th/id/OIP.vwN3Y9sr3vUO1kA5e7joBQHaHV?pid=Api&rs=1', onImageLoaded);
+addImage('https://th.bing.com/th/id/OIP.vwN3Y9sr3vUO1kA5e7joBQHaHV?pid=Api&rs=1', onImageLoaded);
 
 export { addImage };
