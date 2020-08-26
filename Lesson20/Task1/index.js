@@ -1,22 +1,42 @@
-export class User {
-  constructor(name, age) {
+class Sportsman {
+  constructor(name) {
     this.name = name;
-    this.age = age;
   }
-  static createEmpty() {
-    return new User('', null);
+  run() {
+    console.log(`${this.name} is running`);
   }
-  sayHi() {
-    console.log(`Hi, I am ${this.name}`);
-  }
-  requestNewPhoto() {
-    console.log(`New photo request was sent for ${this.name}`);
-  }
-  setAge(age) {
-    if (age < 0) { return false; }
-    this.age = age;
-    if (age >= 25) { this.requestNewPhoto() }
-    return age;
-  }
-
 }
+
+class Swimmer extends Sportsman {
+  constructor(name, style) {
+    super(name);
+    this.style = style;
+  }
+  text() {
+    console.log(this);
+  }
+  swim() {
+    console.log(`${this.name} is swimming ${this.style}`);
+  }
+}
+//testing 
+
+const spoortsmann = new Sportsman('Denis');
+console.log(spoortsmann);
+spoortsmann.run();
+
+const swwimer1 = new Swimmer('Nazar', 'test style');
+console.log(swwimer1);
+swwimer1.text();
+swwimer1.swim();
+
+
+//claes vs object
+
+obj1 = {
+  name: 'Denis',
+  run() {
+    console.log(`${this.name} is runnung`);
+  }
+};
+//console.log(obj1);
