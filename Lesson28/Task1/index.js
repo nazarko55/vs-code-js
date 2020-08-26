@@ -1,4 +1,4 @@
-const addImage = imgSrc => {
+export const addImage = imgSrc => {
   const p = new Promise((resolve, reject) => {
     const imgElem = document.createElement('img');
     imgElem.setAttribute('alt', 'My photo');
@@ -15,7 +15,7 @@ const addImage = imgSrc => {
   return p;
 };
 
-const imgSrc = 'https://wallpapershome.com/images/wallpapers/rihan-1080x1920-top-music-artist-and-bands-singer-actress-510.jpg';
+const imgSrc = 'htps://wallpapershome.com/images/wallpapers/rihan-1080x1920-top-music-artist-and-bands-singer-actress-510.jpg';
 
 const resultPromise = addImage(imgSrc);
 
