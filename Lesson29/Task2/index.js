@@ -21,3 +21,4 @@ export const asyncCalculator = num => new Promise((resolve) => {
     }))
   .then(res => res);
 
+/* */
