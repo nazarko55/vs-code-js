@@ -1,29 +1,24 @@
-const splitText = (text, len) => {
-  const strArr = [];
-  let startPosition = 0;
+export const asyncCalculator = num => new Promise((resolve) => {
+  setTimeout(() => {
+    console.log(`Initial value: ${num}`)
+    resolve(num);
+  }, 500)
+})
+  .then(value => new Promise((resolve) => {
+    setTimeout(() => {
+      const result = value * value;
+      console.log(`Squared value: ${result}`);
+      resolve(result);
+    }, 2000)
+  }))
+  .then(value =>
+    new Promise((resolve) => {
+      const result = value * 2;
+      console.log(`Doubled value: ${result}`);
+      resolve(result);
 
-  if (text === !String) {
-    return null;
-  }
 
-  while (true) {
-    let chunk = text.substr(startPosition, len);
-    // if (chunk === !String) {
-    //     return null;
-    // }
-    if (chunk.length === 0) {
-      break;
-    }
-    if (len === undefined) {
-      strArr.push(chunk[0].toUpperCase() + chunk.slice(1));
-      startPosition += 10;
-    }
-    else {
-      strArr.push(chunk[0].toUpperCase() + chunk.slice(1));
-      startPosition += len;
-    }
-  }
-  return strArr.join('\n');
-}
+    }))
+  .then(res => res);
 
-console.log(splitText('kevinspace', 5));
+/* */
