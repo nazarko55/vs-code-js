@@ -12,3 +12,5 @@ function getTaskById(tasksId) {
     .then(response => response.json())
     .then(result => console.log(result));
 }
+export { getTaskById };
+export { getTasksList };
