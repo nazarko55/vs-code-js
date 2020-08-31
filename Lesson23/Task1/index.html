@@ -9,24 +9,17 @@
 </head>
 
 <body>
-  <main class="page">
-    <form class="login-form">
-      <h1 class="form-title">Login</h1>
-      <div class="form-control">
-        <label class="form-label" for="email">Email</label>
-        <input class="form-input" type="email" id="email" name="email" placeholder="mail@example.com" required />
-        <span class="error-text error-text_email"></span>
-      </div>
-      <div class="form-control">
-        <label class="form-label" for="password">Password</label>
-        <input class="form-input" type="password" id="password" name="password" required />
-        <span class="error-text error-text_password"></span>
-      </div>
-      <button class="submit-button" type="submit">Submit</button>
-    </form>
+  <h1 class="title">Todo List</h1>
+  <main class="todo-list">
+    <div class="actions">
+      <input class="task-input" type="text">
+      <button class="btn create-task-btn">Create</button>
+    </div>
+    <ul class="list">
+      <!-- Элементы списка должны генерироваться и добавлятся на страницу с помощью JavaScript -->
+    </ul>
   </main>
-  <script src="index.js"></script>
-  <script src="app.js"></script>
+  <script src="index.js" type="module"></script>
 </body>
 
 </html>
