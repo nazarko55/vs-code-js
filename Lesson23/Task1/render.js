@@ -1,6 +1,7 @@
 import { tasks } from "./storage";
 
 const listElem = document.querySelector('.list');
+listElem.innerHTML = '';
 
 export const renderList = tasks => {
   const listItemsElem = tasks
@@ -10,20 +11,19 @@ export const renderList = tasks => {
   listElem.append(...listItemsElem);
 
   // input obj,
-  //putput DOMeLEMENT
+  //output DOMeLEMENT
 
   const sortEl = (a, b) => {
-  .sort((a, b) => {
-    if (a.done - b.done !== 0) return a.done - b.done;
+    if (a.done - b.done !== 0)
+      return a.done - b.done;
     if (a.done && b.done)
-      return (new Date(b.doneDate) - new Date(a.doneDate));
+      return (b.doneDate) - new Date(a.doneDate);
     if (!a.done && !b.done)
-      return (new Date(b.createDate) - new Date(a.createDate));
-  })
+      return (b.createDate) - new Date(a.createDate);
+  }
 }
 
 const createLi = () => {
-  .map((task) => {
   const listItemElem = document.createElement('li');
 
   listItemElem.classList.add('list__item');
@@ -36,7 +36,8 @@ const createLi = () => {
   if (done) {
     listItemElem.classList.add('list__item_done');
   }
+
   checkboxItem.classList.add('list__item-checkbox');
   listItemElem.append(checkboxItem, text);
   return listItemElem;
-});
+};

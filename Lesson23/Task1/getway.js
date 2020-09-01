@@ -1,24 +1,24 @@
 import { tasks } from './storage.js';
 import { renderList } from './render.js';
 
-const listElem = document.querySelector('.list');
-const createBtn = document.querySelector('.create-task-btn');
+
 const inputElem = document.querySelector('.task-input');
 
 
-export const checkthisDone = (event) => {
-  const checkedEl = event.target;
-  if (checkedEl.tagName !== 'INPUT') return;
-  const getElId = tasks.find(elem => elem.id === +checkedEl.parentElement.dataset.id);
-  getElId.done = checkedEl.checked;
-  getElId.doneDate = new Date();
-  listElem.innerHTML = '';
+export const updateTask = (event) => {
+  const clickedElem = event.target;
+  if (clickedElem.tagName !== 'INPUT') return;
+
+  const taskById = tasks.find(elem => elem.id == clickedElem.dataset.id);
+
+  taskById.done = !taskById.done;
+  taskById.doneDate = taskById.done ? new Date() : null;
+
   renderList(tasks);
 
 };
 
-listElem.addEventListener('click', checkthisDone);
-const createTaskBoard = () => {
+export const createTask = () => {
   if (inputElem.value == '') return;
 
   tasks.push({
@@ -26,11 +26,10 @@ const createTaskBoard = () => {
     text: inputElem.value,
     done: false,
     createDate: new Date(),
-    checkDate: undefined,
+    checkDate: null,
   });
 
   inputElem.value = '';
-  listElem.innerHTML = '';
+
   renderList(tasks);
 };
-createBtn.addEventListener('click', createTaskBoard);
