@@ -5,10 +5,10 @@ const getUsersList = () => {
     .then(response => response.json())
 };
 
-const getUserById = (userId) => {
-  return fetch(`${baseUrl}/ ${userId}`)
+function getUserById(userId) {
+  return fetch(`${baseUrl}/${userId}`)
     .then(response => response.json())
-}
+};
 
 const createUser = (userObj) => {
   return fetch(baseUrl, {
